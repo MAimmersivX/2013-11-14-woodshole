@@ -1,7 +1,7 @@
 % Software Carpentry - Overview
-  University of <font color="maroon">Chicago</font>
+  Woods Hole Scientific Community
 % Software Carpentry Team
-% June, 2013
+% November, 2013
 
 ## Copy This Lecture!
 <br></br>
@@ -16,9 +16,9 @@
 
 ## History
 
-* Founded by Greg Wilson in 1998.
-* Open sourced materials 2004-06
-* Currently funded by Sloan Foundation
+* Founded by Greg Wilson in 1998, teaching scientists how to use supercomputers at LANL.
+* Open sourced materials 2004-present
+* Currently funded by the Sloan Foundation and the Mozilla Foundation
 
 ## What We Teach
 
@@ -55,19 +55,20 @@
 
 ## Who We Are
 
-* John Blischak  (Uchicago)
-* Randy Olson (MSU)
 * Will Trimble (Argonne)
-* Emily Davenport  (Uchicago)
-
+* Ross Dickson (Dalhousie University) 
+* Woods Hole Python Users Group
+* volunteers
+ 
 ## Our Goals for You
 
 ### We will take you on a tour of:
 >
-* Exploring the Command Line with the Bash Shell
+* Managing and sharing Software, Data, and Manuscripts with Git
+* Automating things with the shell
 * Principles of Practical Programming with Python
-* Managing and Collaborating with your Software, Data, and Manuscripts with Git
 * Scientific Computing with Python
+* Gallery of plotting and mapping in Python (matplotlib and basemap)
 
 # Some High-Level Advice
 
@@ -91,9 +92,9 @@ new things!
 ## Use domain specific languages and libraries to increase your expressivity
 
 * Aim for languages and tools that allow you to express your models and
-manage your data simply, whether that is symbolically, numerically, or
-like [`chebfun`](http://www2.maths.ox.ac.uk/chebfun/),
-a strange union of the two.
+manage your data simply. 
+
+## Make it work right first, make it fast later.
 
 ## Use REPL Environments for Development
 
@@ -110,23 +111,13 @@ Mathematica                  Fortran
 LISP
 
 
-## Understand the limitations of floating-point numbers, learn symbolic tools as well
-* As a computational scientist, you will likely be working with numerical
-systems solved using floating point numbers
-    + The excellent article *What Every Computer Scientist Should Know About
-    Floating-Point Arithmetic* is a great way to do some advance reading
-
-* Don't limit yourself to numerical computations, use symbolic tools such as
-SAGE, SymPy and Mathematica as well when they make sense
 
 # Don't Repeat Yourself (or Others)
 
 ## Automate common actions by saving simple blocks of code into **scripts**
 
->
+
 * A script is a set of commands organized into a single file
-* Sometimes it takes a few arguments, but more often there are just
-some parameters at the top of the file to modify
 * The script is the basest unit of scientific programming, you should be
 comfortable writing these whenever you want to save or otherwise document or
 repeat your actions
@@ -134,7 +125,7 @@ repeat your actions
 * **Don't repeat commands into your REPL, save them to a script**
 
 ## Refactor commonly used blocks of code into **functions**
->
+
 * Eventually, you will find that your scripts have a lot of repeated code,
 or that you are spending a lot of time adjusting parameters at the top of
 the file
@@ -145,12 +136,11 @@ environment, whether it is bash or Python
 * **Don't repeat code in scripts, refactor them to functions**
 
 ## Group commonly used functions into **libraries**
->
-* If you are unlucky enough to have to write a lot of software functions for
-your work, you might want to consider designing and releasing a library so that
+
+* If you have to write a lot of software functions,
+consider designing and releasing a library so that
 others do not have to share your misfortune
-* You might want to first check that nobody else has implemented the
-functionality you need
+* Check that nobody else has implemented the functionality you need
 * If something close exists, it may be worth adapting to your needs if the
 project is of high quality and suitably licensed
 * *Openly licensed non-commercial libraries tend to have a much longer effective
@@ -161,8 +151,7 @@ lifespan than unreleased codes*
 
 ## Basic strategies
 
->
-* Endeavor to use languages and libraries that reduce the complexity of
+* Use languages and libraries that reduce the complexity of
 your work
 * It is worth installing a complicated or expensive software tool if your
 computations or model are naturally expressed with it
@@ -174,11 +163,6 @@ computations or model are naturally expressed with it
 and avoid excessive nesting
 
 ## Back up your data!
-
-## Organize with wikis
-
-* organize your personal notes into a personal wiki (gollum, gitit, instiki)
-* organize your shared notes into a group wiki (gollum, gitit, instiki)
 
 ## Use version control for checkpointing and collaboration
 
@@ -200,11 +184,7 @@ and avoid excessive nesting
 in question?
 * test frameworks help you verify your code, but validation is usually a manual
 process
- + although it is desirable to write regression tests that verify previously
- validated results hold true when the code has been modified!
-* use the **method of manufactured solutions** to verify correctness of code
-* use **comparisons to experiment** to validate code
-* use **comparisons to similar software** as an additional check
+* Be paranoid and test small things!  
 
 # Document your Computational Work
 
@@ -217,101 +197,6 @@ it in 6 months
 * If any piece of code is too complex to easily describe, consider refactoring
 it
 
-
-# Learning Objectives
-
-# Learning Objectives (Shell)
-
-## Given an operating system with a bash command line interface installed on it:
->
-* Start the bash terminal on your operating system
-* Query the bash program's environment
-* Change the bash program's environment
-* Change directories to and determine the path of you home directory and specified files
-* Generate directory listings and distinguish between files and directories in listings
-
-## Given a directory tree containing files, directories, and sample data, and a working directory:
->
-*  Generate wildcard expressions to match to sets of files using filename prefixes, filename suffixes, and fixed-length internal wildcards
-*  Determine both absolute and relative paths for a specified file
-*  copy, rename, and delete specified files and directories.
-*  concatenate and browse files on the terminal
-*  determine location on filesystem of specified executables in the path
-
-## Given a directory tree containing files, directories, and sample data, and a working directory:
->
-*  display manual pages for system commands and executables and interpret manual pages contents to use new command options
-*  construct queries using the find command to list files and directories
-*  use pipes to filter output from commands such as ls and wc into filters such as grep, sort, head, and tail to answer questions like "identify the five largest files in the current directory tree" or "display a list of files in the current tree sorted by number of lines"
-*  create and invoke an executable script to automate a filtering and piping task
-
-# Learning Objectives (Python)
-
-## Given an IPython shell,
-
-### Command basic data structures to manipulate data
->
-* Do arithmetic with integer and floating-point data
-* Create, search, replace, and combine, and take subsets of string data
-* Create, add to, remove from, and iterate through lists of data
-* Create, add to, remove from, and select from dictionaries of data
-* Contrast the uses of tuples with lists
-
-### Control code using Boolean expressions, Conditionals, Loops, Functions, and Scripts
->
-* Use truthiness to control program flow
-* Define and use functions to reuse code
-* Run Python scripts from the command line
-
-## Given a formatted data file or pipeline
->
-* Read the data programmatically using Python
-
-## Given a set of Python computations
->
-* Programmatically save the data as text or Excel data
-
-# Learning Objectives (Version Control)
-
-## Given a project directory containing code and notes associated with your research,
->
-* perform a one-time set up to associate the code with a hidden directory
-"repository" for saving prior states
-* record the precise state of the directory as a "snapshot" so that it can be
-accessed in the future.
-
-## Given the name of a project file in the repository,
->
-* retrieve a version of that file from any point in the project's history of
-snapshots.
-
-## For a particular snapshot of a project,
->
-* retrieve the snapshot's author
-* retrieve the date that the snapshot was created
-* retrieve the difference between the snapshot and another snapshot
-
-## For a project directory that has been modified since its last snapshot
->
-* retrieve the difference between the directory and the last snapshot
-* selectively "undo" some or all of the changes from the last snapshot
-
-## Given access to your collaborator's snapshots of changes for the same project (paper, code, etc...)
->
-* compare the difference between your collaborator's latest snapshot and your
-own
-* create a unified history of snapshots that includes both your collaborator's
-changes and your own.
-* resolve any conflicts to files that both you and your collaborators have
-modified
-
-## Given a Git version control repository
->
-* view the history of snapshots and their "parents"
-* distinguish between the snapshot's identifier and the bookmarks "branches"
-that point to them
-* connect the repository to another repository, a "remote", and send and
-retrieve snapshots with your collaborators.
 
 ## Schedule 
 
