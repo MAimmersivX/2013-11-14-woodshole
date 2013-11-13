@@ -2,6 +2,8 @@
 layout: lesson
 root: ../..
 title: "Version Control With Git: Local Operations"
+username: wltrimbl
+testrepo: 2013-11-14-woodshole
 ---
 ## Example: A Slide Deck for a Presentation
 
@@ -16,6 +18,15 @@ written are synchronized between your two machines? How can you be sure that
 every little change you've made on your netbook is reflected on your desktop? 
 What happens if you start making changes on your slide deck, only to realize you 
 need to drop back to the slide deck you had five days ago?
+
+## Example: B Slide Deck for a Presentation
+You have completed an analysis, and submitted a manuscript. A reviewer 
+asks whether you would get a different result if you had filtered the input data
+differently.  But you have been working on your analysis scripts for months; 
+the version of the script which generated the paper has since been modified to
+make it easier for you to use on another project.
+* Can you keep track of analysis scripts, data, and figures that you actually used?
+* Can you conveniently repeat the analysis with a small modificiation without pain?
 
 ## git : What is Version Control ?
 
@@ -51,16 +62,17 @@ Version Control System Tool Options
   - subversion (svn)
 
 ## git clone : we've seen git already
-Yesterday morning, after installing git, we asked everyone to run
+Earlier this morning, after installing git, we asked everyone to run
 ```
-git clone http://github.com/USERNAME/YYYY-MM-DD-PLACE 
+git clone http://github.com/{{page.username}}/{{page.testrepo}}
 ```
 This created a copy of the software carpentry repository materials on
-each of your hard drives yesterday morning.   If you did this yesterday,
-you don't need to to it again.
+each of your hard drives. 
 
-*But*, last night, the instructors changed the content on github, so now
-the repositories on all our hard drives are out of date.
+*But*, the instructional materials are a changing beast; we've been 
+fine tuning them.  Git facilitates multiple contributors working on
+the materials and allows us to distribute the contents and updates 
+to everyone. 
 
 ```
 cd
