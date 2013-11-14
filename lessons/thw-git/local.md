@@ -38,6 +38,7 @@ provides both a nice vocabulary list and a fairly complete table of some
 popular version control systems and their equivalent commands.
 
 What problems does version control solve?
+
 * undo mistakes by rolling back to earlier versions
 * run and test with older versions for debugging (when did it break?)
 * allows you to keep and switch between multiple verisons of code
@@ -76,11 +77,12 @@ to everyone.
 
 ```
 cd
-cd boot-camps
+cd {{page.testrepo}}
 git pull
 ```
-will try to retrieve all of last night's changes and update your local
-copies.  Note: git commands work only when executed from within the directory
+will try to retrieve all of the changes that the repository knows about.
+
+Note: git commands work only when executed from within the directory
 that contains the repository.
 
 ## git --help : Getting Help
