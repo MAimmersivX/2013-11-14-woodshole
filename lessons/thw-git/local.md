@@ -19,7 +19,7 @@ every little change you've made on your netbook is reflected on your desktop?
 What happens if you start making changes on your slide deck, only to realize you 
 need to drop back to the slide deck you had five days ago?
 
-## Example: B Slide Deck for a Presentation
+## Example: Adding data to a figure months later
 You have completed an analysis, and submitted a manuscript. A reviewer 
 asks whether you would get a different result if you had filtered the input data
 differently.  But you have been working on your analysis scripts for months; 
@@ -46,10 +46,10 @@ What problems does version control solve?
 * can distribute/publish analysis code and workflows
 * archive or back up your thesis so when your laptop goes away, your thesis doesn't
 
-Today, we'll be using git. Git is an example of a distributed version
-control system, distinct from centralized version control systems. I'll
-make the distinction clear later, but for now, the table below will
-suffice.
+Git is an example of a distributed version
+control system, distinct in design from centralized version control systems. 
+These are examples of the two types; they all have the same basic functionality, 
+the only differences are in the details of how they are used. 
 
 Version Control System Tool Options
 
@@ -63,7 +63,7 @@ Version Control System Tool Options
   - subversion (svn)
 
 ## git clone : we've seen git already
-Earlier this morning, after installing git, we asked everyone to run
+Yesterday, after installing git, we asked everyone to run
 ```
 git clone http://github.com/{{page.username}}/{{page.testrepo}}
 ```
@@ -74,11 +74,10 @@ each of your hard drives.
 fine tuning them.  Git facilitates multiple contributors working on
 the materials and allows us to distribute the contents and updates 
 to everyone. 
-
 ```
 cd
 cd {{page.testrepo}}
-git pull
+git pull origin gh-pages
 ```
 will try to retrieve all of the changes that the repository knows about.
 
